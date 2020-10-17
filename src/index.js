@@ -3,7 +3,9 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import netlifyIdentity from 'netlify-identity-widget';
 
+window.netlifyIdentity = netlifyIdentity;
 ReactDOM.render(
   <React.StrictMode>
     <App />
