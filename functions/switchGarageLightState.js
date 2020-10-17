@@ -19,8 +19,14 @@ exports.handler = async (event, context) => {
   const { devices } = getDevices;
 
   try {
-    const result = await account.getLightState(SN);
+    const result = await account.getLightState(serials[0]);
     console.log(result);
+  } catch (error) {
+    console.log(error);
+  }
+  try {
+    const result2 = await account.getLightState(serials[1]);
+    console.log(result2);
   } catch (error) {
     console.log(error);
   }
