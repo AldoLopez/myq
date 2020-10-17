@@ -22,7 +22,7 @@ const Garage = () => (
       id='toggleLight'
       label='Toggle Light'
       color='primary'
-      onClick={this.toggleLight}
+      onClick={toggleLight}
     ></Button>
   </div>
 );
