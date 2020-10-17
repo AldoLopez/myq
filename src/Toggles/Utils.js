@@ -12,7 +12,7 @@ export const toggleLight = () => {
       )
       .then((res) => {
         console.log(res);
-        alert(`Garage Door: ${res.doorStatus}`);
+        alert(`Garage Door: ${res.body}`);
       });
   });
 };

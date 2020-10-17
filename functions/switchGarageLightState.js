@@ -40,5 +40,5 @@ exports.handler = async (event, context) => {
     console.log(error);
   }
 
-  return { statusCode: 200, doorStatus };
+  return { statusCode: 200, body: doorStatus };
 };
