@@ -25,7 +25,7 @@ exports.handler = async (event, context) => {
     const action =
       result.deviceState === 'closed'
         ? MyQ.actions.door.OPEN
-        : MyQ.actions.door.CLOSED;
+        : MyQ.actions.door.CLOSE;
     const newResult = await account.setDoorState(serials[0], action);
     console.log(newResult);
   } catch (error) {
