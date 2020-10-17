@@ -29,7 +29,7 @@ exports.handler = async (event, context) => {
         : MyQ.actions.door.CLOSE;
     const newResult = await account.setDoorState(serials[0], action);
     console.log(newResult);
-    doorStatus.status = action;
+    doorStatus = action;
   } catch (error) {
     console.log(error);
   }
@@ -40,5 +40,5 @@ exports.handler = async (event, context) => {
     console.log(error);
   }
 
-  return { statusCode: 200, doorStatus: doorStatus.status };
+  return { statusCode: 200, doorStatus };
 };
