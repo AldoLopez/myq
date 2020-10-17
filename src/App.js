@@ -2,8 +2,6 @@ import React from 'react';
 import './App.css';
 import netlifyIdentity from 'netlify-identity-widget';
 import { loginUser, logoutUser } from './identityActions';
-import auth from './hoc/AuthHOC';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import { Button } from '@material-ui/core';
 import { toggleLight } from './Toggles/Utils';
 netlifyIdentity.init();
