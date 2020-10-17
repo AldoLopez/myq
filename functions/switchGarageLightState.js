@@ -1,4 +1,4 @@
-const { USER, PW } = process.env;
+const { USER, PW, SN } = process.env;
 const MyQ = require('myq-api');
 
 exports.handler = async (event, context) => {
@@ -17,17 +17,10 @@ exports.handler = async (event, context) => {
 
   const getDevices = await account.getDevices();
   const { devices } = getDevices;
-  serials = [];
-  devices.forEach((device) => {
-    console.log(`${device.name}: sn-${device.serial_number}`);
-    serials.push(device.serial_number);
-  });
 
   try {
-    const result = await account.getLightState(serials[0]);
+    const result = await account.getLightState(SN);
     console.log(result);
-    const result2 = await account.getLightState(serials[1]);
-    console.log(result2);
   } catch (error) {
     console.log(error);
   }
