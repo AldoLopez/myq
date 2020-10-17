@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { generateHeaders } from '../identityActions';
 
 export const toggleLight = () => {
   generateHeaders().then((headers) => {
