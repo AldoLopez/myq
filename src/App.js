@@ -44,12 +44,12 @@ class App extends React.Component {
               <header className='App-header'>
                 <Button
                   id='toggleLight'
-                  label='Toggle Light'
+                  label='Toggle Door'
                   color='primary'
                   variant='contained'
                   onClick={toggleLight}
                 >
-                  Toggle Light
+                  Toggle Door
                 </Button>
                 <Button variant='contained' onClick={this.handleLogOut}>
                   Logout

@@ -19,6 +19,7 @@ exports.handler = async (event, context) => {
   const { devices } = getDevices;
   const serials = [];
   devices.forEach((device) => serials.push(device.serial_number));
+  const doorStatus = '';
   try {
     const result = await account.getDoorState(serials[0]);
     console.log(result);
@@ -28,6 +29,7 @@ exports.handler = async (event, context) => {
         : MyQ.actions.door.CLOSE;
     const newResult = await account.setDoorState(serials[0], action);
     console.log(newResult);
+    doorStatus.status = action;
   } catch (error) {
     console.log(error);
   }
@@ -38,5 +40,5 @@ exports.handler = async (event, context) => {
     console.log(error);
   }
 
-  return { statusCode: 200 };
+  return { statusCode: 200, doorStatus: doorStatus.status };
 };
