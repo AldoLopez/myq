@@ -18,7 +18,7 @@ exports.handler = async (event, context) => {
   const getDevices = await account.getDevices();
   const { devices } = getDevices;
   devices.forEach((device) => {
-    console.log(`${index}: sn-${device.serial_number}`);
+    console.log(`${device.name}: sn-${device.serial_number}`);
   });
   return { statusCode: 200 };
 };

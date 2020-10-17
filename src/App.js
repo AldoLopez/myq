@@ -47,7 +47,9 @@ class App extends React.Component {
                   label='Toggle Light'
                   color='primary'
                   onClick={toggleLight}
-                ></Button>
+                >
+                  Toggle Light
+                </Button>
                 <Button variant='contained' onClick={this.handleLogOut}>
                   Logout
                 </Button>
