@@ -44,7 +44,7 @@ class App extends React.Component {
           <div>
             {this.state.user ? (
               <header className='App-header'>
-                <Link to='/garage' className='home' alt='garage'>
+                <Link to='/garage' className='Garage' alt='garage'>
                   <Button variant='contained' color='primary'>
                     <span>Garage</span>
                   </Button>
