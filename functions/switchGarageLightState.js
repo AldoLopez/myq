@@ -17,7 +17,8 @@ exports.handler = async (event, context) => {
 
   const getDevices = await account.getDevices();
   const { devices } = getDevices;
-
+  const serials = [];
+  devices.forEach((device) => serials.push(device.serial_number));
   try {
     const result = await account.getLightState(serials[0]);
     console.log(result);
