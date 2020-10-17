@@ -20,13 +20,13 @@ exports.handler = async (event, context) => {
   const serials = [];
   devices.forEach((device) => serials.push(device.serial_number));
   try {
-    const result = await account.getLightState(serials[0]);
+    const result = await account.getDoorState(serials[0]);
     console.log(result);
   } catch (error) {
     console.log(error);
   }
   try {
-    const result2 = await account.getLightState(serials[1]);
+    const result2 = await account.getDoorState(serials[1]);
     console.log(result2);
   } catch (error) {
     console.log(error);
