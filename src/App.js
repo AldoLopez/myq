@@ -46,6 +46,7 @@ class App extends React.Component {
                   id='toggleLight'
                   label='Toggle Light'
                   color='primary'
+                  variant='contained'
                   onClick={toggleLight}
                 >
                   Toggle Light
